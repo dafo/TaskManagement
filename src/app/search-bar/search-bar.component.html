@@ -1,0 +1,70 @@
+<igx-navbar class="navbar">
+  <ng-container>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>notifications</igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>email</igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>account_circle</igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>more_vert</igx-icon>
+    </button>
+  </ng-container>
+  <igx-navbar-title>My Kanban App</igx-navbar-title>
+</igx-navbar>
+<div class="group_3 row">
+  <div class="group column">
+    <igx-avatar initials="HA" [roundShape]="false" size="small" class="avatar"></igx-avatar>
+    <igx-avatar initials="BR" [roundShape]="false" size="small" class="avatar_3"></igx-avatar>
+    <igx-avatar initials="LT" [roundShape]="false" size="small" class="avatar_3"></igx-avatar>
+    <igx-avatar initials="WP" [roundShape]="false" size="small" class="avatar_3"></igx-avatar>
+  </div>
+  <div class="group_3 column">
+    <div class="group_1 row">
+      <div class="group_5 row">
+        <button igxButton="icon" igxRipple routerLink="/i-am-the-master-view/kanban-board">
+          <igx-icon>search</igx-icon>
+        </button>
+        <h5 class="h5">Fintech Project</h5>
+      </div>
+      <div class="group_5 row">
+        <button igxButton="icon" igxRipple routerLink="/i-am-the-master-view/list-view" class="button_1">
+          <igx-icon>list</igx-icon>
+        </button>
+        <button igxButton="icon" igxRipple routerLink="/i-am-the-master-view/kanban-board" class="button_1">
+          <igx-icon>dashboard</igx-icon>
+        </button>
+      </div>
+      <div class="group_5 row">
+        <p class="igx-typography__subtitle-1 text">Project Members</p>
+        <igx-avatar initials="YT" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+        <igx-avatar initials="BR" [roundShape]="true" size="small" class="avatar_2"></igx-avatar>
+        <button igxButton="icon" igxRipple>
+          <igx-icon>add</igx-icon>
+        </button>
+      </div>
+    </div>
+    <div class="group_2 row">
+      <div class="group_4 row">
+        <p class="igx-typography__body-1 text_1">Select boards to search</p>
+        <igx-checkbox labelPosition="after" class="checkbox">All</igx-checkbox>
+        <igx-checkbox labelPosition="after" class="checkbox">Active</igx-checkbox>
+        <igx-checkbox labelPosition="after" class="checkbox">Archived</igx-checkbox>
+        <igx-input-group type="border" class="input">
+          <igx-prefix>
+            <igx-icon family="material" class="icon">search</igx-icon>
+          </igx-prefix>
+          <input type="text" igxInput />
+          <label igxLabel>Label/Placeholder</label>
+        </igx-input-group>
+      </div>
+      <button igxButton="raised" igxRipple class="button">Search now</button>
+    </div>
+    <div class="view-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
